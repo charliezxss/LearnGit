@@ -19,15 +19,16 @@ yum update -y && yum install curl -y
 
 #### 4.优化 V2Ray
 ```bash
- 
+v2ray bbr
 # 查看bbr是否重启
-lsmod | grep bbr 
+lsmod | grep bbr
 ```
 
 #### 5.查看是否开启2333端口并开启
 ```bash
 firewall-cmd --list-ports
 firewall-cmd --zone=public --add-port=2333/tcp --permanent
+reboot
 ```
 
 #### 6.获取vmess
